@@ -1,0 +1,952 @@
+<html>
+<head>
+<script src="jquery-3.1.1.js"></script>
+<script>
+
+var s1=0;
+var s2=0;
+var c1=0;
+var c2=0;
+var b1=0;
+var b2=0;
+var f1=1;
+var f2=3;
+var f3=5;
+var n=9;
+var visit={};
+visit["FruitApple1"]=false;
+visit["FruitBanana1"]=false;
+visit["FruitBanana2"]=false;
+visit["FruitBanana3"]=false;
+visit["FruitBanana4"]=false;
+visit["FruitBanana5"]=false;
+visit["FruitCherry1"]=false;
+visit["FruitCherry2"]=false;
+visit["FruitCherry3"]=false;
+var current="b2x0";
+var current1="b0x0";
+var count=0;
+function wave(){
+	var c=getOffset(document.getElementById(current)).left;
+	var t=getOffset(document.getElementById(current)).top;
+if(current=="b1x4" || current=="b1x3" || current=="b1x2" || current=="b1x1" || current=="b1x0"){
+       if (c>75){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==355){document.getElementById("b1x3").style.backgroundImage = string; 
+if(visit["FruitCherry2"]==false){visit["FruitCherry2"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+current="b1x3";}
+else if(c==285){document.getElementById("b1x2").style.backgroundImage = string; current="b1x2";}
+else if(c==215){document.getElementById("b1x1").style.backgroundImage = string; current="b1x1";}
+else if(c==145){document.getElementById("b1x0").style.backgroundImage = string; current="b1x0";
+if(visit["FruitCherry1"]==false){visit["FruitCherry1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+}
+}
+}
+else if(current=="b0x4" || current=="b0x3" || current=="b0x2" || current=="b0x1" || current=="b0x0"){
+       if (c>75){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==355){document.getElementById("b0x3").style.backgroundImage = string; current="b0x3";}
+else if(c==285){document.getElementById("b0x2").style.backgroundImage = string; current="b0x2";}
+else if(c==215){document.getElementById("b0x1").style.backgroundImage = string; current="b0x1";
+if(visit["FruitBanana1"]==false){visit["FruitBanana1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+
+
+ }
+else if(c==145){document.getElementById("b0x0").style.backgroundImage = string; current="b0x0";}
+}
+}
+else if(current=="b2x4" || current=="b2x3" || current=="b2x2" || current=="b2x1" || current=="b2x0"){
+       if (c>75){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==355){document.getElementById("b2x3").style.backgroundImage = string; current="b2x3";}
+else if(c==285){document.getElementById("b2x2").style.backgroundImage = string; current="b2x2";}
+else if(c==215){document.getElementById("b2x1").style.backgroundImage = string; current="b2x1";}
+else if(c==145){document.getElementById("b2x0").style.backgroundImage = string; current="b2x0";}
+}
+}
+else if(current=="b3x4" || current=="b3x3" || current=="b3x2" || current=="b3x1" || current=="b3x0"){
+       if (c>75){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==355){document.getElementById("b3x3").style.backgroundImage = string; current="b3x3";}
+else if(c==285){document.getElementById("b3x2").style.backgroundImage = string; current="b3x2";}
+else if(c==215){document.getElementById("b3x1").style.backgroundImage = string; current="b3x1";}
+else if(c==145){document.getElementById("b3x0").style.backgroundImage = string; current="b3x0";
+if(visit["FruitBanana4"]==false){visit["FruitBanana4"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+}
+}
+}else if(current=="b4x4" || current=="b4x3" || current=="b4x2" || current=="b4x1" || current=="b4x0"){
+       if (c>75){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==355){document.getElementById("b4x3").style.backgroundImage = string; current="b4x3";
+if(visit["FruitApple1"]==false){visit["FruitApple1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+ }
+else if(c==285){document.getElementById("b4x2").style.backgroundImage = string; current="b4x2";}
+else if(c==215){document.getElementById("b4x1").style.backgroundImage = string; current="b4x1";
+if(visit["FruitBanana5"]==false){visit["FruitBanana5"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+ }
+else if(c==145){document.getElementById("b4x0").style.backgroundImage = string; current="b4x0";}
+}
+}
+if(c!=75){
+bot2(count);
+count++;
+}
+}
+function getOffset(el) {
+  el = el.getBoundingClientRect();
+  return {
+    left: el.left + window.scrollX,
+    top: el.top + window.scrollY
+  }
+}
+function wave1(){
+	var c=getOffset(document.getElementById(current)).left;
+	var t=getOffset(document.getElementById(current)).top;
+if(current=="b1x4" || current=="b1x3" || current=="b1x2" || current=="b1x1" || current=="b1x0"){
+       if (c<355){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==285){document.getElementById("b1x4").style.backgroundImage = string; current="b1x4";}
+else if(c==215){document.getElementById("b1x3").style.backgroundImage = string; 
+if(visit["FruitCherry2"]==false){visit["FruitCherry2"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+current="b1x3";}
+else if(c==145){document.getElementById("b1x2").style.backgroundImage = string; current="b1x2";}
+else if(c==75){document.getElementById("b1x1").style.backgroundImage = string; current="b1x1";}
+}
+}
+else if(current=="b0x4" || current=="b0x3" || current=="b0x2" || current=="b0x1" || current=="b0x0"){
+       if (c<355){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==285){document.getElementById("b0x4").style.backgroundImage = string;
+if(visit["FruitBanana2"]==false){visit["FruitBanana2"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+ current="b0x4";}
+else if(c==215){document.getElementById("b0x3").style.backgroundImage = string; current="b0x3";}
+else if(c==145){document.getElementById("b0x2").style.backgroundImage = string; current="b0x2";}
+else if(c==75){document.getElementById("b0x1").style.backgroundImage = string; 
+if(visit["FruitBanana1"]==false){visit["FruitBanana1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+
+current="b0x1";}
+}
+}
+else if(current=="b2x4" || current=="b2x3" || current=="b2x2" || current=="b2x1" || current=="b2x0"){
+       if (c<355){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==285){document.getElementById("b2x4").style.backgroundImage = string; 
+if(visit["FruitBanana3"]==false){visit["FruitBanana3"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+current="b2x4";}
+else if(c==215){document.getElementById("b2x3").style.backgroundImage = string; current="b2x3";}
+else if(c==145){document.getElementById("b2x2").style.backgroundImage = string; current="b2x2";}
+else if(c==75){document.getElementById("b2x1").style.backgroundImage = string; current="b2x1";}
+}
+}
+else if(current=="b3x4" || current=="b3x3" || current=="b3x2" || current=="b3x1" || current=="b3x0"){
+       if (c<355){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==285){document.getElementById("b3x4").style.backgroundImage = string; 
+if(visit["FruitCherry3"]==false){visit["FruitCherry3"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+current="b3x4";}
+else if(c==215){document.getElementById("b3x3").style.backgroundImage = string; current="b3x3";}
+else if(c==145){document.getElementById("b3x2").style.backgroundImage = string; current="b3x2";}
+else if(c==75){document.getElementById("b3x1").style.backgroundImage = string; current="b3x1";}
+}
+}else if(current=="b4x4" || current=="b4x3" || current=="b4x2" || current=="b4x1" || current=="b4x0"){
+       if (c<355){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(c==285){document.getElementById("b4x4").style.backgroundImage = string; current="b4x4";}
+else if(c==215){document.getElementById("b4x3").style.backgroundImage = string;
+if(visit["FruitApple1"]==false){visit["FruitApple1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+ current="b4x3";}
+else if(c==145){document.getElementById("b4x2").style.backgroundImage = string; current="b4x2";}
+else if(c==75){document.getElementById("b4x1").style.backgroundImage = string;
+if(visit["FruitBanana5"]==false){visit["FruitBanana5"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+ current="b4x1";}
+}
+}
+if(c!=355){
+bot2(count);
+count++;
+}
+}
+function wave2(){
+	var c=getOffset(document.getElementById(current)).left;
+	var t=getOffset(document.getElementById(current)).top;
+if(current=="b0x0" || current=="b1x0" || current=="b2x0" || current=="b3x0" || current=="b4x0"){
+       if (t<332){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==52){document.getElementById("b1x0").style.backgroundImage = string; 
+if(visit["FruitCherry1"]==false){visit["FruitCherry1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+current="b1x0";}
+else if(t==122){document.getElementById("b2x0").style.backgroundImage = string; current="b2x0";}
+else if(t==192){document.getElementById("b3x0").style.backgroundImage = string; 
+if(visit["FruitBanana4"]==false){visit["FruitBanana4"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+current="b3x0";}
+else if(t==262){document.getElementById("b4x0").style.backgroundImage = string; current="b4x0";}
+}
+}
+else if(current=="b0x1" || current=="b1x1" || current=="b2x1" || current=="b3x1" || current=="b4x1"){
+       if (t<332){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==52){document.getElementById("b1x1").style.backgroundImage = string; current="b1x1";}
+else if(t==122){document.getElementById("b2x1").style.backgroundImage = string; current="b2x1";}
+else if(t==192){document.getElementById("b3x1").style.backgroundImage = string; current="b3x1";}
+else if(t==262){document.getElementById("b4x1").style.backgroundImage = string;
+if(visit["FruitBanana5"]==false){visit["FruitBanana5"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+ current="b4x1";}
+}
+}
+else if(current=="b0x2" || current=="b1x2" || current=="b2x2" || current=="b3x2" || current=="b4x2"){
+       if (t<332){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==52){document.getElementById("b1x2").style.backgroundImage = string; current="b1x2";}
+else if(t==122){document.getElementById("b2x2").style.backgroundImage = string; current="b2x2";}
+else if(t==192){document.getElementById("b3x2").style.backgroundImage = string; current="b3x2";}
+else if(t==262){document.getElementById("b4x2").style.backgroundImage = string; current="b4x2";}
+}
+}
+else if(current=="b0x3" || current=="b1x3" || current=="b2x3" || current=="b3x3" || current=="b4x3"){
+       if (t<332){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==52){document.getElementById("b1x3").style.backgroundImage = string; 
+if(visit["FruitCherry2"]==false){visit["FruitCherry2"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+current="b1x3";}
+else if(t==122){document.getElementById("b2x3").style.backgroundImage = string; current="b2x3";}
+else if(t==192){document.getElementById("b3x3").style.backgroundImage = string; current="b3x3";}
+else if(t==262){document.getElementById("b4x3").style.backgroundImage = string; 
+if(visit["FruitApple1"]==false){visit["FruitApple1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+current="b4x3";}
+}
+}
+else if(current=="b0x4" || current=="b1x4" || current=="b2x4" || current=="b3x4" || current=="b4x4"){
+       if (t<332){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==52){document.getElementById("b1x4").style.backgroundImage = string; current="b1x4";}
+else if(t==122){document.getElementById("b2x4").style.backgroundImage = string;
+if(visit["FruitBanana3"]==false){visit["FruitBanana3"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+
+ current="b2x4";}
+else if(t==192){document.getElementById("b3x4").style.backgroundImage = string; 
+if(visit["FruitCherry3"]==false){visit["FruitCherry3"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+current="b3x4";}
+else if(t==262){document.getElementById("b4x4").style.backgroundImage = string; current="b4x4";}
+}
+}
+if(t!=332){
+bot2(count);
+count++;
+}
+}
+function wave3(){
+	var c=getOffset(document.getElementById(current)).left;
+	var t=getOffset(document.getElementById(current)).top;
+if(current=="b0x0" || current=="b1x0" || current=="b2x0" || current=="b3x0" || current=="b4x0"){
+       if (t>52){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==122){document.getElementById("b0x0").style.backgroundImage = string; current="b0x0";}
+else if(t==192){document.getElementById("b1x0").style.backgroundImage = string;
+if(visit["FruitCherry1"]==false){visit["FruitCherry1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+ current="b1x0";}
+else if(t==262){document.getElementById("b2x0").style.backgroundImage = string; current="b2x0";}
+else if(t==332){document.getElementById("b3x0").style.backgroundImage = string; 
+if(visit["FruitBanana4"]==false){visit["FruitBanana4"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+current="b3x0";}
+}
+}
+else if(current=="b0x1" || current=="b1x1" || current=="b2x1" || current=="b3x1" || current=="b4x1"){
+       if (t>52){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==122){document.getElementById("b0x1").style.backgroundImage = string; 
+if(visit["FruitBanana1"]==false){visit["FruitBanana1"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+current="b0x1";}
+else if(t==192){document.getElementById("b1x1").style.backgroundImage = string; current="b1x1";}
+else if(t==262){document.getElementById("b2x1").style.backgroundImage = string; current="b2x1";}
+else if(t==332){document.getElementById("b3x1").style.backgroundImage = string; current="b3x1";}
+}
+}
+else if(current=="b0x2" || current=="b1x2" || current=="b2x2" || current=="b3x2" || current=="b4x2"){
+       if (t>52){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==122){document.getElementById("b0x2").style.backgroundImage = string; current="b0x2";}
+else if(t==192){document.getElementById("b1x2").style.backgroundImage = string; current="b1x2";}
+else if(t==262){document.getElementById("b2x2").style.backgroundImage = string; current="b2x2";}
+else if(t==332){document.getElementById("b3x2").style.backgroundImage = string; current="b3x2";}
+}
+}
+else if(current=="b0x3" || current=="b1x3" || current=="b2x3" || current=="b3x3" || current=="b4x3"){
+       if (t>52){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==122){document.getElementById("b0x3").style.backgroundImage = string; current="b0x3";}
+else if(t==192){document.getElementById("b1x3").style.backgroundImage = string; 
+if(visit["FruitCherry2"]==false){visit["FruitCherry2"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+current="b1x3";}
+else if(t==262){document.getElementById("b2x3").style.backgroundImage = string; current="b2x3";}
+else if(t==332){document.getElementById("b3x3").style.backgroundImage = string; current="b3x3";}
+}
+}
+else if(current=="b0x4" || current=="b1x4" || current=="b2x4" || current=="b3x4" || current=="b4x4"){
+       if (t>52){
+var base="url('Jack.jpg')";
+var string = "url('FruitBlueBot.png')";
+ document.getElementById(current).style.backgroundImage = base;
+if(t==122){document.getElementById("b0x4").style.backgroundImage = string;
+if(visit["FruitBanana2"]==false){visit["FruitBanana2"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+ current="b0x4";}
+else if(t==192){document.getElementById("b1x4").style.backgroundImage = string; current="b1x4";}
+else if(t==262){document.getElementById("b2x4").style.backgroundImage = string; 
+if(visit["FruitBanana3"]==false){visit["FruitBanana3"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+
+current="b2x4";}
+else if(t==332){document.getElementById("b3x4").style.backgroundImage = string; 
+if(visit["FruitCherry3"]==false){visit["FruitCherry3"]=true;n=n-1;s1=s1+1;document.getElementById("winner").innerHTML =s1;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}
+}}
+
+current="b3x4";}
+}
+}
+if(t!=52){
+bot2(count);
+count++;
+}
+}
+
+function bot2(x){
+	var base="url('Jack.jpg')";
+var string = "url('FruitPurpleBot.png')";
+ document.getElementById(current1).style.backgroundImage = base;
+
+switch(x){
+case 0:document.getElementById("b1x0").style.backgroundImage = string; current1="b1x0"; 
+if(visit["FruitCherry1"]==false){visit["FruitCherry1"]=true;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+break;
+case 1:document.getElementById("b1x1").style.backgroundImage = string;current1="b1x1";
+break;
+case 2:document.getElementById("b1x2").style.backgroundImage = string;current1="b1x2";
+break;
+case 3:document.getElementById("b1x3").style.backgroundImage = string; 
+if(visit["FruitCherry2"]==false){visit["FruitCherry2"]=true;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+current1="b1x3"; 
+break;
+case 4:document.getElementById("b2x3").style.backgroundImage = string;current1="b2x3";
+break;
+case 5:document.getElementById("b3x3").style.backgroundImage = string;current1="b3x3";
+break;
+case 6:document.getElementById("b4x3").style.backgroundImage = string; current1="b4x3"; 
+if(visit["FruitApple1"]==false){visit["FruitApple1"]=true;f1=f1-1;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;document.getElementById("napple").innerHTML =f1;
+if(s1==2||s2==2){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1==2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+break;
+case 7:document.getElementById("b4x2").style.backgroundImage = string;current1="b4x2";
+break;
+case 8:document.getElementById("b4x1").style.backgroundImage = string;
+if(visit["FruitBanana5"]==false){visit["FruitBanana5"]=true;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+current1="b4x1"; 
+break;
+case 9:document.getElementById("b4x0").style.backgroundImage = string;current1="b4x0";
+break;
+case 10:document.getElementById("b3x0").style.backgroundImage = string;
+if(visit["FruitBanana4"]==false){visit["FruitBanana4"]=true;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+
+current1="b3x0";
+break;
+case 11:document.getElementById("b2x0").style.backgroundImage = string;current1="b2x0";
+break;
+case 12:document.getElementById("b1x0").style.backgroundImage = string;current1="b1x0";
+break;
+case 13:document.getElementById("b0x0").style.backgroundImage = string;current1="b0x0";
+break;
+case 14:document.getElementById("b0x1").style.backgroundImage = string;
+if(visit["FruitBanana1"]==false){visit["FruitBanana1"]=true;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+current1="b0x1";
+break;
+case 15:document.getElementById("b0x2").style.backgroundImage = string;current1="b0x2";
+break;
+case 16:document.getElementById("b0x3").style.backgroundImage = string;current1="b0x3";
+break;
+case 17:document.getElementById("b0x4").style.backgroundImage = string;
+if(visit["FruitBanana2"]==false){visit["FruitBanana2"]=true;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+current1="b0x4";
+break;
+case 18:document.getElementById("b1x4").style.backgroundImage = string;current1="b1x4";
+break;
+case 19:document.getElementById("b2x4").style.backgroundImage = string;
+if(visit["FruitBanana3"]==false){visit["FruitBanana3"]=true;s2=s2+1;n=n-1;document.getElementById("botz").innerHTML =s2;
+if(n==0){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1>s2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}}
+current1="b2x4";
+break;
+/*document.getElementById("b0x1").style.backgroundImage = string; 
+if(s1==2||s2==2){document.getElementById("up").disabled = true;document.getElementById("down").disabled = true;document.getElementById("left").disabled = true;document.getElementById("right").disabled = true;
+if(s1==2){document.getElementById("fwin").innerHTML = "You win";}
+else{document.getElementById("fwin").innerHTML = "You Loose";}}
+if(visit["FruitBanana1"]==false){visit["FruitBanana1"]=true;f3=f3-1;b2=b2+1;if(b2==3){s2=s2+1;}document.getElementById("nbanana").innerHTML =f3;}current1="b0x1"; 
+break;
+*/
+
+}
+}
+
+
+</script>
+<style>
+#b0x0{
+	position: absolute;
+	left: 75px;
+	top: 52px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitPurpleBot.png");
+	border: 1px solid black;
+}
+#b0x1{
+	position: absolute;
+	left: 145px;
+	top: 52px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitBanana.jpg");
+	border: 1px solid black;
+}
+#b0x2{
+	position: absolute;
+	left: 215px;
+	top: 52px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b0x3{
+	position: absolute;
+	left: 285px;
+	top: 52px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b0x4{
+	position: absolute;
+	left: 355px;
+	top: 52px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitBanana.jpg");
+	border: 1px solid black;
+}
+#b1x0{
+	position: absolute;
+	left: 75px;
+	top: 122px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitCherry.png");
+	border: 1px solid black;
+}
+#b1x1{
+	position: absolute;
+	left: 145px;
+	top: 122px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b1x2{
+	position: absolute;
+	left: 215px;
+	top: 122px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b1x3{
+	position: absolute;
+	left: 285px;
+	top: 122px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitCherry.png");
+	border: 1px solid black;
+}
+#b1x4{
+	position: absolute;
+	left: 355px;
+	top: 122px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b2x0{
+	position: absolute;
+	left: 75px;
+	top: 192px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitBlueBot.png");
+	border: 1px solid black;
+}
+#b2x1{
+	position: absolute;
+	left: 145px;
+	top: 192px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b2x2{
+	position: absolute;
+	left: 215px;
+	top: 192px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b2x3{
+	position: absolute;
+	left: 285px;
+	top: 192px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b2x4{
+	position: absolute;
+	left: 355px;
+	top: 192px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitBanana.jpg");
+	border: 1px solid black;
+}
+#b3x0{
+	position: absolute;
+	left: 75px;
+	top: 262px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitBanana.jpg");
+	border: 1px solid black;
+}
+#b3x1{
+	position: absolute;
+	left: 145px;
+	top: 262px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b3x2{
+	position: absolute;
+	left: 215px;
+	top: 262px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b3x3{
+	position: absolute;
+	left: 285px;
+	top: 262px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b3x4{
+	position: absolute;
+	left: 355px;
+	top: 262px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitCherry.png");
+	border: 1px solid black;
+}
+#b4x0{
+	position: absolute;
+	left: 75px;
+	top: 332px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b4x1{
+	position: absolute;
+	left: 145px;
+	top: 332px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitBanana.jpg");
+	border: 1px solid black;
+}
+#b4x2{
+	position: absolute;
+	left: 215px;
+	top: 332px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#b4x3{
+	position: absolute;
+	left: 285px;
+	top: 332px;
+	width :70px;
+	height:70px;
+	background-image: url("FruitApple.png");
+	border: 1px solid black;
+}
+#b4x4{
+	position: absolute;
+	left: 355px;
+	top: 332px;
+	width :70px;
+	height:70px;
+	background-image: url("jack.jpg");
+	border: 1px solid black;
+}
+#up{
+position: absolute;
+	left: 610px;
+	top: 240px;
+	width :50px;
+	height:50px;
+}
+#left{
+	position: absolute;
+	left: 550px;
+	top: 300px;
+	width :50px;
+	height:50px;
+}
+#down{
+	position: absolute;
+	left: 610px;
+	top: 300px;
+	width :50px;
+	height:50px;
+}
+#right{
+	position: absolute;
+	left: 670px;
+	top: 300px;
+	width :50px;
+	height:50px;
+}
+#winner1{
+position: absolute;
+	left: 500px;
+	top: 185px;
+}
+#winner2{
+position: absolute;
+	left: 500px;
+	top: 205px;
+}
+
+#fwinner{
+	position: absolute;
+	left:550px;
+	top:100px;
+}
+#score{
+	position: absolute;
+	left: 250px;
+	top: 530px;
+	width: 100px;
+	height: 50px;
+}
+#score1{
+	position: absolute;
+	left: 350px;
+	top: 530px;
+	height: 50px;
+}
+#score2{
+	position: absolute;
+	left: 450px;
+	top: 530px;
+	height: 50px;
+}
+#instructions{
+	position: absolute;
+	left: 550px;
+	top: 100px;
+}
+</style>
+</head>
+<body>
+<table>
+<tr>
+<td width="60%">
+<div id="b0x0"></div>
+<div id="b0x1"></div>
+<div id="b0x2"></div>
+<div id="b0x3"></div>
+<div id="b0x4"></div>
+</td>
+</tr>
+<tr>
+<td width="60%">
+<div id="b1x0"></div>
+<div id="b1x1"></div>
+<div id="b1x2"></div>
+<div id="b1x3"></div>
+<div id="b1x4"></div>
+</td>
+</tr>
+
+<tr>
+<td width="60%">
+<div id="b2x0"></div>
+<div id="b2x1"></div>
+<div id="b2x2"></div>
+<div id="b2x3"></div>
+<div id="b2x4"></div>
+</td>
+</tr>
+
+<tr>
+<td width="60%">
+<div id="b3x0"></div>
+<div id="b3x1"></div>
+<div id="b3x2"></div>
+<div id="b3x3"></div>
+<div id="b3x4"></div>
+</td>
+</tr>
+
+<tr>
+<td width="60%">
+<div id="b4x0"></div>
+<div id="b4x1"></div>
+<div id="b4x2"></div>
+<div id="b4x3"></div>
+<div id="b4x4"></div>
+</td>
+</tr>
+</table>
+<button id="up" onclick="wave3()">up</button><br>
+<button id="left" onclick="wave()">left</button>
+<button id="down" onclick="wave2()">down</button>
+<button id="right" onclick="wave1()">Right</button>
+<div id="winner1"><table border="0"><tr><td><p>You have collected </p></td><td><p id="winner">0</p></td><td><p> Fruits</p></td></tr></table></div>
+<div id="winner2"><table border="0"><tr><td><p>Bot has collected </p></td><td><p id="botz">0</p></td><td><p> Fruits</p></td></tr></table></div>
+
+<div id="fwinner"><p style="font-size:36px;" id="fwin"></p></div>
+
+
+</div>
+</body>
+</html>
